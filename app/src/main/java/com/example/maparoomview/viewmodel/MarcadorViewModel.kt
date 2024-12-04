@@ -15,6 +15,10 @@ class MarcadorViewModel(application: Application) : AndroidViewModel(application
     private val _marcadores = MutableLiveData<List<Marcador>>()
     val marcadores: LiveData<List<Marcador>> get() = _marcadores
 
+    init {
+        inicializarDatos()
+    }
+
     fun obtenerMarcadores() {
         viewModelScope.launch {
             _marcadores.value = marcadorDao.obtenerTodosLosMarcadores()
