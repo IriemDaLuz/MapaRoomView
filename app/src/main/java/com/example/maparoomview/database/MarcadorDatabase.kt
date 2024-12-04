@@ -16,6 +16,16 @@ abstract class MarcadorDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: MarcadorDatabase? = null
 
-
+        fun getDatabase(context: Context): MarcadorDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    MarcadorDatabase::class.java,
+                    "marcadores_db"
+                ).build()
+                INSTANCE = instance
+                instance
+            }
+        }
     }
 }
