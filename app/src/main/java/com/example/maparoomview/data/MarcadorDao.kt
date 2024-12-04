@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.maparoomview.models.Marcador
+import com.example.maparoomview.models.TipoMarcador
 
 
 @Dao
