@@ -61,5 +61,25 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
             .copy(isEnableRotationGesture = true)
             .copy(zoomButtonVisibility = ZoomButtonVisibility.SHOW_AND_FADEOUT)
 
+        lugares.forEach { lugar ->
+            val lugarState = rememberMarkerState(
+                geoPoint = GeoPoint(
+                    lugar.latitude.toDouble(),
+                    lugar.longitude.toDouble()
+                )
+            )
+
+            val nombreTipoLugar = tiposlugares[lugar.IdTipoLugar]
+
+            val context = LocalContext.current
+
+            val ImagenLugares = when (lugar.IdTipoLugar) {
+                1-> R.drawable.museo
+                else -> R.drawable.estadio
+            }
+
+            val drawable = ContextCompat.getDrawable(context, ImagenLugares)
+
         }
     }
+}
