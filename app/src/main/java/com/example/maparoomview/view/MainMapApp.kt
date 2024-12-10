@@ -44,6 +44,11 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
     val lugares by ViewModelMap.lugares.collectAsState()
     val tiposlugares by ViewModelMap.tiposlugares.collectAsState()
 
+    val cameraState = rememberCameraState {
+        geoPoint = GeoPoint(41.38379275681205, 2.138805384392312)
+        zoom = 16.5
+    }
+
     var mapProperties by remember { mutableStateOf(DefaultMapProperties) }
 
 }
