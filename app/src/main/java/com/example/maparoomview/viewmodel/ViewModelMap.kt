@@ -20,6 +20,24 @@ class ViewModelMap(
     val tiposlugares: StateFlow<Map<Int, String>> = _tiposlugares
 
 
+    init {
+        cargarMarcadores()
+        cargarTiposMarcadores()
+    }
+
+    private fun cargarMarcadores() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val lugarList = lugarDao.getAllMarkers()
+            _lugares.value = lugarList
+        }
+    }
+
+    private fun cargarTiposMarcadores() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val types = tipoLugarDao.getAllMarkerTypes()
+            _tiposlugares.value = types.associate { it.id to it.name }
+        }
+    }
 
 
 
