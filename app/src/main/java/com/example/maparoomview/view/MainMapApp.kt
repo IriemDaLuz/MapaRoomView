@@ -80,6 +80,12 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
 
             val drawable = ContextCompat.getDrawable(context, ImagenLugares)
 
+            Marker(
+                state = lugarState,
+                title = lugar.name,
+                snippet = nombreTipoLugar,
+                icon = drawable
+            ) {}
         }
     }
 }
