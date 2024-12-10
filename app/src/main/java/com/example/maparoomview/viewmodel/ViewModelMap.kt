@@ -40,5 +40,21 @@ class ViewModelMap(
     }
 
 
+    private fun insertarTiposLugares() {
+        val tiposLugares = listOf(
+            TipoLugar(name = "Monumentos"),
+            TipoLugar(name = "Actividades"),
+            TipoLugar(name = "Deportivos"),
+            TipoLugar(name = "Centros Comerciales"),
+            TipoLugar(name = "Otros")
+        )
+
+        CoroutineScope(Dispatchers.IO).launch {
+            tiposLugares.forEach { tipoLugar ->
+                tipoLugarDao.insertMarkerType(tipoLugar)
+            }
+        }
+    }
+
 
 }
