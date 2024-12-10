@@ -41,5 +41,9 @@ val GoogleSat: OnlineTileSourceBase = object : XYTileSource(
 
 @Composable
 fun MainMapApp(ViewModelMap: ViewModelMap) {
+    val lugares by ViewModelMap.lugares.collectAsState()
+    val tiposlugares by ViewModelMap.tiposlugares.collectAsState()
+
+    var mapProperties by remember { mutableStateOf(DefaultMapProperties) }
 
 }
