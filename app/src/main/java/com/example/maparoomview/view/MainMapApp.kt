@@ -51,4 +51,15 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
 
     var mapProperties by remember { mutableStateOf(DefaultMapProperties) }
 
-}
+    OpenStreetMap(
+        modifier = Modifier.fillMaxSize(),
+        cameraState = cameraState,
+        properties = mapProperties
+    ) {
+        mapProperties = mapProperties
+            .copy(tileSources = GoogleSat)
+            .copy(isEnableRotationGesture = true)
+            .copy(zoomButtonVisibility = ZoomButtonVisibility.SHOW_AND_FADEOUT)
+
+        }
+    }
