@@ -85,7 +85,29 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                 title = lugar.name,
                 snippet = nombreTipoLugar,
                 icon = drawable
-            ) {}
+            ) {
+                Column(
+                    modifier = Modifier
+                        .widthIn(0.dp, 250.dp)
+                        .background(
+                            color = Color(0xD0000000),
+                            shape = RoundedCornerShape(8.dp)
+                        )
+                        .padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = it.title,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 22.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+
+
+                }
+            }
         }
     }
 }
