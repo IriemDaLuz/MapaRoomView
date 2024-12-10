@@ -75,7 +75,10 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
 
             val ImagenLugares = when (lugar.IdTipoLugar) {
                 1-> R.drawable.museo
-                else -> R.drawable.estadio
+                2-> R.drawable.ocio
+                3-> R.drawable.estadio
+                4-> R.drawable.centro_comercial
+                else -> R.drawable.otros
             }
 
             val drawable = ContextCompat.getDrawable(context, ImagenLugares)
