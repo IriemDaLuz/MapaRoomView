@@ -38,3 +38,8 @@ val GoogleSat: OnlineTileSourceBase = object : XYTileSource(
         ) + "&z=" + MapTileIndex.getZoom(pTileIndex)
     }
 }
+
+@Composable
+fun MainMapApp(ViewModelMap: ViewModelMap) {
+
+}
