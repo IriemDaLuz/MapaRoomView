@@ -91,10 +91,9 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
             ) {
                 Column(
                     modifier = Modifier
-                        .widthIn(0.dp, 250.dp)
                         .background(
-                            color = Color(0xD0000000),
-                            shape = RoundedCornerShape(8.dp)
+                            color = Color(0xFF3F51B5),
+                            shape = RoundedCornerShape(0.dp)
                         )
                         .padding(16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -104,6 +103,13 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         color = Color.White,
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
+                        textAlign = TextAlign.Center
+                    )
+                    Text(
+                        text = it.snippet,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
