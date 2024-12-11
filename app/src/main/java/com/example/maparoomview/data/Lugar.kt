@@ -22,7 +22,7 @@ data class Lugar(
     val latitude: String,
     val longitude: String,
     val IdTipoLugar: Int,
-    val image: String,
+    val imageResourceId: Int? = null,
     val description: String
 
 )
