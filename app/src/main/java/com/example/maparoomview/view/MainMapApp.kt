@@ -129,6 +129,14 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         )
                     }
 
+                    Text(
+                        text = lugar.description,
+                        color = Color.White,
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 12.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(top = 8.dp)
+                    )
 
                 }
             }
