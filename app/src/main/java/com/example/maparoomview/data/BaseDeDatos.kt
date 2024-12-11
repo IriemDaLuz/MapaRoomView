@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Lugar::class, TipoLugar::class], version = 7)
+@Database(entities = [Lugar::class, TipoLugar::class], version = 9)
 abstract class BaseDeDatos : RoomDatabase() {
 
     abstract fun LugarDao(): LugarDao
