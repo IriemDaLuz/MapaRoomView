@@ -11,12 +11,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.utsman.osmandcompose.*
 import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase
 import org.osmdroid.tileprovider.tilesource.XYTileSource
@@ -59,7 +61,6 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
         mapProperties = mapProperties
             .copy(tileSources = GoogleSat)
             .copy(isEnableRotationGesture = true)
-            .copy(zoomButtonVisibility = ZoomButtonVisibility.SHOW_AND_FADEOUT)
 
         lugares.forEach { lugar ->
             val lugarState = rememberMarkerState(
@@ -113,6 +114,20 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
+                    // Mostrar la imagen del lugar
+                    val imageResource = remember {
+                        ContextCompat.getDrawable(context, context.resources.getIdentifier(lugar.image, "drawable", context.packageName))
+                    }
+
+                    imageResource?.let { drawable ->
+                        androidx.compose.foundation.Image(
+                            bitmap = drawable.toBitmap().asImageBitmap(),
+                            contentDescription = "Imagen de ${lugar.name}",
+                            modifier = Modifier
+                                .widthIn(max = 200.dp)
+                                .padding(bottom = 8.dp)
+                        )
+                    }
 
 
                 }
