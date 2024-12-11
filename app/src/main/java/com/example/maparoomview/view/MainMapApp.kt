@@ -138,6 +138,14 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         else -> R.drawable.otros
                     }
 
+                    Image(
+                        painter = painterResource(id = ImagenDescLugares),
+                        contentDescription = lugar.name,
+                        modifier = Modifier
+                            .padding(8.dp)
+                            .widthIn(max = 200.dp)
+                    )
+
                     Text(
                         text = lugar.description,
                         color = Color.White,
