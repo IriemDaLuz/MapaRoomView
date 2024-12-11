@@ -3,6 +3,7 @@ package com.example.maparoomview
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -52,7 +53,7 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
 
     val cameraState = rememberCameraState {
         geoPoint = GeoPoint(41.38379275681205, 2.138805384392312)
-        zoom = 16.5
+        zoom = 13.5
     }
 
     var mapProperties by remember { mutableStateOf(DefaultMapProperties) }
@@ -97,9 +98,12 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                 Column(
                     modifier = Modifier
                         .background(
-                            color = Color(0xFF3F51B5),
-                            shape = RoundedCornerShape(0.dp)
+                            color = Color(0x9A3044B2),
+                            shape = RoundedCornerShape(40.dp),
+
                         )
+                        .border(1.dp, Color.White, shape = RoundedCornerShape(40.dp))
+
                         .padding(16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -144,6 +148,7 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         modifier = Modifier
                             .padding(8.dp)
                             .widthIn(max = 200.dp)
+
                     )
 
                     Text(
