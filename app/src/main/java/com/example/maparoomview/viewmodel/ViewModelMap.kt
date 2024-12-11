@@ -52,7 +52,7 @@ class ViewModelMap(
                     latitude = "41.4036299",
                     longitude = "2.1743558",
                     IdTipoLugar = 1,
-                    image = "sagradafamilia.jpeg",
+                    image = "sagradafamilia.webp",
                     description = "Una basílica icónica diseñada por Gaudí."
                 ),
                 Lugar(
@@ -60,7 +60,7 @@ class ViewModelMap(
                     latitude = "41.414495",
                     longitude = "2.152694",
                     IdTipoLugar = 1,
-                    image = "parqueguell.jpeg",
+                    image = "parqueguell.avif",
                     description = "Un parque colorido lleno de mosaicos y arquitectura única."
                 ),
                 Lugar(
@@ -76,7 +76,7 @@ class ViewModelMap(
                     latitude = "41.391682",
                     longitude = "2.164921",
                     IdTipoLugar = 1,
-                    image = "casabatllo.jpeg",
+                    image = "casabatllo.jpg",
                     description = "Una obra maestra modernista de Antoni Gaudí."
                 ),
                 Lugar(
@@ -84,7 +84,7 @@ class ViewModelMap(
                     latitude = "41.422600",
                     longitude = "2.117046",
                     IdTipoLugar = 2,
-                    image = "tibidabo.jpeg",
+                    image = "tibidabo.jpg",
                     description = "Un parque de atracciones con vistas espectaculares de Barcelona."
                 ),
                 Lugar(
@@ -92,7 +92,7 @@ class ViewModelMap(
                     latitude = "41.363633",
                     longitude = "2.158003",
                     IdTipoLugar = 2,
-                    image = "montjuic.jpeg",
+                    image = "montjuic.jpg",
                     description = "Una montaña llena de historia, cultura y eventos deportivos."
                 ),
                 Lugar(
@@ -100,7 +100,7 @@ class ViewModelMap(
                     latitude = "41.408510",
                     longitude = "2.216056",
                     IdTipoLugar = 4,
-                    image = "diagonalmar.jpeg",
+                    image = "diagonalmar.jpg",
                     description = "Un gran centro comercial cerca del mar."
                 ),
                 Lugar(
@@ -108,7 +108,7 @@ class ViewModelMap(
                     latitude = "41.437520",
                     longitude = "2.192768",
                     IdTipoLugar = 4,
-                    image = "lamaquinista.jpeg",
+                    image = "lamaquinista.jpg",
                     description = "Un centro comercial con una amplia variedad de tiendas."
                 ),
                 Lugar(
@@ -116,7 +116,7 @@ class ViewModelMap(
                     latitude = "41.087560",
                     longitude = "1.146771",
                     IdTipoLugar = 2,
-                    image = "portaventura.jpeg",
+                    image = "portaventura.jpg",
                     description = "Un parque temático emocionante cerca de Barcelona."
                 ),
                 Lugar(
@@ -124,7 +124,7 @@ class ViewModelMap(
                     latitude = "41.570178",
                     longitude = "2.261460",
                     IdTipoLugar = 3,
-                    image = "circuitocat.jpeg",
+                    image = "circuitocat.webp",
                     description = "Un circuito de carreras reconocido a nivel mundial."
                 ),
                 Lugar(
@@ -132,7 +132,7 @@ class ViewModelMap(
                     latitude = "41.368857",
                     longitude = "2.154311",
                     IdTipoLugar = 1,
-                    image = "mnac.jpeg",
+                    image = "mnac.jpg",
                     description = "Un museo que alberga arte catalán de diversas épocas."
                 ),
                 Lugar(
@@ -140,7 +140,7 @@ class ViewModelMap(
                     latitude = "41.387017",
                     longitude = "2.170112",
                     IdTipoLugar = 4,
-                    image = "corteingles.jpeg",
+                    image = "corteingles.png",
                     description = "Un centro comercial emblemático en el corazón de la ciudad."
                 ),
                 Lugar(
@@ -148,7 +148,7 @@ class ViewModelMap(
                     latitude = "41.364803",
                     longitude = "2.152777",
                     IdTipoLugar = 3,
-                    image = "palausantjordi.jpeg",
+                    image = "palausantjordi.jpg",
                     description = "Un pabellón multifuncional para eventos deportivos y conciertos."
                 ),
                 Lugar(
@@ -156,7 +156,7 @@ class ViewModelMap(
                     latitude = "41.376383",
                     longitude = "2.186771",
                     IdTipoLugar = 2,
-                    image = "aquarium.jpeg",
+                    image = "aquarium.jpg",
                     description = "Un acuario con una impresionante colección de vida marina."
                 ),
                 Lugar(
@@ -164,7 +164,7 @@ class ViewModelMap(
                     latitude = "41.383036",
                     longitude = "2.177293",
                     IdTipoLugar = 5,
-                    image = "plazadelrey.jpeg",
+                    image = "plazadelrey.jpg",
                     description = "Una plaza histórica en el corazón del Barrio Gótico."
                 )
             )
