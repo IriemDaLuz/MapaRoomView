@@ -1,5 +1,7 @@
 package com.example.maparoomview
 
+import android.annotation.SuppressLint
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,8 +13,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -114,19 +118,24 @@ fun MainMapApp(ViewModelMap: ViewModelMap) {
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
-                    // Mostrar la imagen del lugar
-                    val imageResource = remember {
-                        ContextCompat.getDrawable(context, context.resources.getIdentifier(lugar.image, "drawable", context.packageName))
-                    }
 
-                    imageResource?.let { drawable ->
-                        androidx.compose.foundation.Image(
-                            bitmap = drawable.toBitmap().asImageBitmap(),
-                            contentDescription = "Imagen de ${lugar.name}",
-                            modifier = Modifier
-                                .widthIn(max = 200.dp)
-                                .padding(bottom = 8.dp)
-                        )
+                    val ImagenDescLugares = when (lugar.imageResourceId) {
+                        1-> R.drawable.sagradafamilia
+                        2-> R.drawable.parqueguell
+                        3-> R.drawable.campnou
+                        4-> R.drawable.casabatllo
+                        5-> R.drawable.tibidabo
+                        6-> R.drawable.montjuic
+                        7-> R.drawable.diagonalmar
+                        8-> R.drawable.lamaquinista
+                        9-> R.drawable.portaventura
+                        10-> R.drawable.circuitocat
+                        11-> R.drawable.mnac
+                        12-> R.drawable.corteingles
+                        13-> R.drawable.palausantjordi
+                        14-> R.drawable.aquarium
+                        15-> R.drawable.plazadelrey
+                        else -> R.drawable.otros
                     }
 
                     Text(
